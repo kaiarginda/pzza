@@ -72,7 +72,7 @@ const PostPage = () => {
 
     getPost();
     getRecentPosts();
-  }, [cookie]);
+  }, [cookie, id]);
   return (
     <div className="flex max-w-3xl mx-auto mt-8">
       {/* Individual Post */}

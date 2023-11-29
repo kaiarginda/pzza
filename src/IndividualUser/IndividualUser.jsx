@@ -127,7 +127,7 @@ const IndividualUser = () => {
 
     fetchUser();
     fetchData();
-  }, [cookie]);
+  }, [cookie, name]);
 
   const logoutHandler = (e) => {
     Cookies.remove("token", { path: "/" });

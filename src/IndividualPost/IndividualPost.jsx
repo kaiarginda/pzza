@@ -22,7 +22,7 @@ const IndividualPost = ({ name, description, image, id }) => {
       }
     };
     fetchComments();
-  }, []);
+  }, [id]);
 
   // Trim the description to a certain length (adjust as needed)
   const trimmedDescription = description.substring(0, 150);
