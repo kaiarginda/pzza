@@ -26,19 +26,22 @@ const Navbar = () => {
     setCookie(cookieValue);
     const getLoggedUser = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/getLoggedUser", {
-          method: "POST",
-          headers: {
-            // "Content-type": "multipart/form-data",
-            "Content-type": "Application/json",
-          },
-          credentials: "include", // Include cookies
-          xhrFields: {
-            withCredentials: true,
-          },
-          // body: { ...formData, price, description, name },
-          body: JSON.stringify({ token: cookie }),
-        });
+        const response = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/getLoggedUser",
+          {
+            method: "POST",
+            headers: {
+              // "Content-type": "multipart/form-data",
+              "Content-type": "Application/json",
+            },
+            credentials: "include", // Include cookies
+            xhrFields: {
+              withCredentials: true,
+            },
+            // body: { ...formData, price, description, name },
+            body: JSON.stringify({ token: cookie }),
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

@@ -17,19 +17,22 @@ const PostPage = () => {
     setCookie(cookieValue);
     const getLoggedUser = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/getLoggedUser", {
-          method: "POST",
-          headers: {
-            // "Content-type": "multipart/form-data",
-            "Content-type": "application/json",
-          },
-          credentials: "include", // Include cookies
-          xhrFields: {
-            withCredentials: true,
-          },
-          // body: { ...formData, price, description, name },
-          body: JSON.stringify({ token: cookie }),
-        });
+        const response = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/getLoggedUser",
+          {
+            method: "POST",
+            headers: {
+              // "Content-type": "multipart/form-data",
+              "Content-type": "application/json",
+            },
+            credentials: "include", // Include cookies
+            xhrFields: {
+              withCredentials: true,
+            },
+            // body: { ...formData, price, description, name },
+            body: JSON.stringify({ token: cookie }),
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -41,13 +44,16 @@ const PostPage = () => {
     };
     getLoggedUser();
     const getPost = async () => {
-      const res = await fetch("http://localhost:5000/v1/get-post", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ id }),
-      });
+      const res = await fetch(
+        "https://pizzaback-cews.onrender.com/v1/get-post",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        }
+      );
       if (res.ok) {
         const data = await res.json();
         setPost(data);
@@ -55,7 +61,9 @@ const PostPage = () => {
     };
 
     const getRecentPosts = async () => {
-      const res = await fetch("http://localhost:5000/v1/all-posts");
+      const res = await fetch(
+        "https://pizzaback-cews.onrender.com/v1/all-posts"
+      );
       if (res.ok) {
         const data = await res.json();
         setRecentPosts(data);
@@ -71,7 +79,7 @@ const PostPage = () => {
       <div className="flex-1 mr-4">
         <h1 className="text-3xl font-bold mb-4">{post.name}</h1>
         <img
-          src={`http://localhost:5000/images/${post.image}`}
+          src={`https://pizzaback-cews.onrender.com/images/${post.image}`}
           alt=""
           className="w-full h-auto mb-4"
         />
@@ -90,7 +98,7 @@ const PostPage = () => {
             className="border border-gray-300 p-2 mb-2 rounded-md"
           >
             <img
-              src={`http://localhost:5000/images/${recentPost.image}`}
+              src={`https://pizzaback-cews.onrender.com/images/${recentPost.image}`}
               //  src={recentPost.image}
               alt=""
               className="w-full h-auto mb-2"

@@ -1,52 +1,3 @@
-// import React from "react";
-// import "./ProductsList.css";
-// import IndividualProduct from "../IndividualProduct/IndividualProduct";
-// const ProductsList = () => {
-//   const productData = {
-//     name: "Awesome Product",
-//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-//     price: 29.99,
-//     // image: "https://example.com/product-image.jpg",
-//   };
-
-//   const productData1 = {
-//     name: "Awesome Product 1",
-//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 1 ",
-//     price: 129.99,
-//     // image: "https://example.com/product-image.jpg",
-//   };
-
-//   const productData2 = {
-//     name: "Awesome Product 2 ",
-//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2",
-//     price: 229.99,
-//     // image: "https://example.com/product-image.jpg",
-//   };
-
-//   const productData3 = {
-//     name: "Awesome Product 3",
-//     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3",
-//     price: 329.99,
-//     // image: "https://example.com/product-image.jpg",
-//   };
-//   return (
-//     <div className="flex justify-center items-center h-screen">
-//       <IndividualProduct product={productData} />
-//       <IndividualProduct product={productData1} />
-//       <IndividualProduct product={productData2} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//       <IndividualProduct product={productData3} />
-//     </div>
-//   );
-// };
-
-// export default ProductsList;
-
 import React, { useState, useEffect } from "react";
 import "./ProductsList.css";
 import IndividualProduct from "../IndividualProduct/IndividualProduct";
@@ -54,7 +5,9 @@ const ProductsList = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/get-products");
+        const response = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/get-products"
+        );
 
         console.log("Response status:", response.status);
         console.log("Response OK:", response.ok);

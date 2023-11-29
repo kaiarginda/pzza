@@ -7,7 +7,7 @@ const CommentInput = ({ postID, author }) => {
   const formSubmitHandler = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:5000/v1/comment", {
+    await fetch("https://pizzaback-cews.onrender.com/v1/comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

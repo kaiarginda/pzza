@@ -15,18 +15,21 @@ const IndividualUser = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const result = await fetch("http://localhost:5000/v1/getUser", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            // Add any other headers if needed
-          },
-          credentials: "include", // Include cookies
-          xhrFields: {
-            withCredentials: true,
-          },
-          body: JSON.stringify({ name }),
-        });
+        const result = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/getUser",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // Add any other headers if needed
+            },
+            credentials: "include", // Include cookies
+            xhrFields: {
+              withCredentials: true,
+            },
+            body: JSON.stringify({ name }),
+          }
+        );
 
         // Check if the request was successful (status code 2xx)
         if (result.ok) {
@@ -51,18 +54,21 @@ const IndividualUser = () => {
 
     const fetchData = async () => {
       try {
-        const result = await fetch("http://localhost:5000/v1/userdata", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            // Add any other headers if needed
-          },
-          credentials: "include", // Include cookies
-          xhrFields: {
-            withCredentials: true,
-          },
-          body: JSON.stringify({ name }),
-        });
+        const result = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/userdata",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              // Add any other headers if needed
+            },
+            credentials: "include", // Include cookies
+            xhrFields: {
+              withCredentials: true,
+            },
+            body: JSON.stringify({ name }),
+          }
+        );
 
         // Check if the request was successful (status code 2xx)
         if (result.ok) {
@@ -92,19 +98,22 @@ const IndividualUser = () => {
     setCookie(cookieValue);
     const getLoggedUser = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/getLoggedUser", {
-          method: "POST",
-          headers: {
-            // "Content-type": "multipart/form-data",
-            "Content-type": "Application/json",
-          },
-          credentials: "include", // Include cookies
-          xhrFields: {
-            withCredentials: true,
-          },
-          // body: { ...formData, price, description, name },
-          body: JSON.stringify({ token: cookie }),
-        });
+        const response = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/getLoggedUser",
+          {
+            method: "POST",
+            headers: {
+              // "Content-type": "multipart/form-data",
+              "Content-type": "Application/json",
+            },
+            credentials: "include", // Include cookies
+            xhrFields: {
+              withCredentials: true,
+            },
+            // body: { ...formData, price, description, name },
+            body: JSON.stringify({ token: cookie }),
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

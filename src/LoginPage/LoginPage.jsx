@@ -28,7 +28,7 @@ const LoginPage = () => {
     setError(false);
     // Handle login logic here'
 
-    const res = await fetch("http://localhost:5000/v1/log-in", {
+    const res = await fetch("https://pizzaback-cews.onrender.com/v1/log-in", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

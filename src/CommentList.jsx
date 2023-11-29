@@ -19,7 +19,7 @@ const CommentList = ({ productId }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/commentList");
+        const response = await fetch("https://pizzaback-cews.onrender.com/v1/commentList");
 
         if (response.ok) {
           const data = await response.json();

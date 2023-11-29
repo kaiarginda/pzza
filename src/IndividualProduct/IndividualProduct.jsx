@@ -6,7 +6,7 @@ const IndividualProduct = ({ product }) => {
       <div className="text-center">{/* <h1>{product.author}</h1>  */}</div>
       <div className="flex items-center justify-center">
         <img
-          src={`http://localhost:5000/images/${product.image}`}
+          src={`https://pizzaback-cews.onrender.com/images/${product.image}`}
           alt={product.name}
           className=" object-cover"
         />
