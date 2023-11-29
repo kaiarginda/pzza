@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Lumanosimo&display=swap");
+
+.copyright {
+  padding: 20px;
+  background-color: #00a850;
+  font-family: "Lumanosimo";
+}
+
+.copyright h2 {
+  font-weight: 400;
+  color: white;
+}
+
+.copyright h2 span {
+  color: black;
+  font-weight: 900;
+}

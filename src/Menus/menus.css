@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Lumanosimo&display=swap");
+
+.menus-main {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+}
+
+.menus-item {
+  position: relative;
+}
+
+.menus-i {
+  color: #00a850;
+  font-size: 170px;
+  position: absolute;
+  top: -35px;
+  left: -23px;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+
+.menus {
+  padding-top: 100px;
+  line-height: 0.7 !important;
+  font-family: "Lumanosimo";
+}
+
+.menus-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.menus-item:hover .menus-i {
+  font-weight: 100 !important;
+  transform: scale(1.2) !important;
+}
+.menus-item-text {
+  font-weight: 900;
+}
+.menus-item:hover .menus-item-text {
+  color: #00a850;
+}
+
+.menus {
+  padding-bottom: 100px;
+}
+
+.menus-item {
+  height: 157px;
+  width: 128px;
+}
+
+.menus-item img {
+  width: 108px;
+  height: 96px;
+}
+
+@media (max-width: 1254px) {
+  .menus-main {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1006px) {
+  .menus-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  .menus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .menus-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}

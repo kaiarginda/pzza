@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Lumanosimo&display=swap");
+
+.footer-main {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.footer {
+  font-family: "Lumanosimo";
+  margin-top: 100px;
+  background: #181818;
+  background-blend-mode: overlay;
+  background-image: url("https://divifoodstore.divifixer.com/wp-content/uploads/2021/06/divi-food-store-12.png");
+}
+
+.footer hr {
+  width: 500px;
+  height: 2px;
+}
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-mid {
+  padding-top: 40px;
+}
+
+.footer-mid ul {
+  list-style: none;
+  color: white;
+  align-items: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer-bot {
+  padding-top: 40px;
+}
+
+.fb-item {
+  color: white;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.fb-item-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.fb-item p {
+  color: #666;
+  font-weight: 900;
+}
+
+.fb-item h1 {
+  font-size: 20px;
+}
+
+.footer-main {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  .footer-mid ul {
+    flex-direction: column;
+  }
+  .fb-item-box {
+    flex-direction: column;
+  }
+}

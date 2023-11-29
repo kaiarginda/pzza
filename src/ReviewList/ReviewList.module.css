@@ -1,0 +1,15 @@
+/* ReviewList.module.css */
+
+.custom-prev-arrow,
+.custom-next-arrow {
+  @apply absolute top-1/2 transform -translate-y-1/2 text-2xl cursor-pointer;
+  color: #333; /* Arrow color */
+}
+
+.custom-prev-arrow {
+  @apply left-4;
+}
+
+.custom-next-arrow {
+  @apply right-4;
+}

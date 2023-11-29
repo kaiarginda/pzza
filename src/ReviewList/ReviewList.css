@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these styles to your Tailwind CSS file */
+.custom-prev-arrow {
+  @apply absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer;
+}
+
+.custom-next-arrow {
+  @apply absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer;
+}
+
+.slick-arrow {
+  @apply text-black text-2xl;
+}
+
+.carousel-item {
+  @apply focus:outline-none;
+}

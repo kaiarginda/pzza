@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Lumanosimo&display=swap");
+
+.listings {
+  overflow: hidden;
+  background-image: url("https://divifoodstore.divifixer.com/wp-content/uploads/2021/06/divi-food-store-10.png");
+  font-family: "Lumanosimo";
+  background-color: #00a850;
+}
+
+.listings-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.listings img {
+  height: 200px;
+  width: 200px;
+}
+
+.listings-item {
+  box-shadow: 0px 2px 18px 0px rgba(255, 255, 255, 0.54);
+  border-radius: 6px;
+  background-color: white;
+  padding: 25px;
+}
+.listings {
+}
+
+.ls-bg {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNGRkZGRkYiPjxwYXRoIGQ9Ik0wIDUxLjc2YzM2LjIxLTIuMjUgNzcuNTctMy41OCAxMjYuNDItMy41OCAzMjAgMCAzMjAgNTcgNjQwIDU3IDI3MS4xNSAwIDMxMi41OC00MC45MSA1MTMuNTgtNTMuNFYwSDB6IiBmaWxsLW9wYWNpdHk9Ii4zIi8+PHBhdGggZD0iTTAgMjQuMzFjNDMuNDYtNS42OSA5NC41Ni05LjI1IDE1OC40Mi05LjI1IDMyMCAwIDMyMCA4OS4yNCA2NDAgODkuMjQgMjU2LjEzIDAgMzA3LjI4LTU3LjE2IDQ4MS41OC04MFYwSDB6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTAgMHYzLjRDMjguMiAxLjYgNTkuNC41OSA5NC40Mi41OWMzMjAgMCAzMjAgODQuMyA2NDAgODQuMyAyODUgMCAzMTYuMTctNjYuODUgNTQ1LjU4LTgxLjQ5VjB6Ii8+PC9nPjwvc3ZnPg==");
+  background-position: center;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+  z-index: 9;
+}
+
+.listings-item h3 {
+  color: #00a850;
+  font-weight: 900;
+}
+
+.ls-bg-1 {
+  rotate: 180deg;
+  z-index: 999 !important;
+}
+
+.listings-item-text {
+  text-align: left;
+}
+
+.listings-item-top {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.listings-item-top {
+  position: relative;
+}
+
+.listings-item-top img {
+  z-index: 999999;
+}
+
+.listings-item-top::before {
+  border-radius: 50%;
+  content: "";
+  height: 175px;
+  width: 175px;
+  background-color: #00a850;
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+.listings-item:hover .listings-item-top::before {
+  transform: scale(1.1);
+}
+
+.listings-item h2 {
+  font-size: 28px;
+}
+
+.bc-bl-wh {
+  background-color: black !important;
+  color: white !important;
+}
+
+.listings-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center !important;
+}
+.ls-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.listings-item p {
+  color: #666;
+  font-size: 22px;
+}
+
+.listings-item {
+  display: flex;
+  flex-direction: column;
+  width: 25% !important;
+  align-items: center;
+}
+
+.listings-item {
+  height: 500px;
+}
+
+@media (max-width: 900px) {
+  .listings-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .listings-item {
+    width: 80% !important;
+    height: auto;
+  }
+}

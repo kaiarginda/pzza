@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Lumanosimo&display=swap");
+
+.daily {
+  font-family: "Lumanosimo";
+}
+
+.daily-item-b {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 400px 400px;
+}
+.daily-left {
+  padding-left: 50px;
+}
+.daily-left img {
+  height: 120px;
+  width: 120px;
+}
+
+.daily-item-box {
+  display: flex;
+}
+
+.daily-item-text {
+  padding-top: 10px;
+  text-align: left;
+}
+
+.daily-item-box {
+  margin: 15px;
+  position: relative;
+}
+
+.daily-item-box::before {
+  background-color: #00a850;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0.1;
+}
+
+.daily-item {
+  border: 1px solid #e5e5e5;
+}
+
+.daily-main {
+  display: flex;
+  gap: 50px;
+}
+
+.daily-item-textcontent p {
+  max-width: 700px;
+}
+.daily-item-textcontent {
+  text-align: left;
+}
+
+.daily-right img {
+  height: 335px;
+  width: 335px;
+}
+
+.daily-right {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  padding: 20px;
+  background-image: url("https://divifoodstore.divifixer.com/wp-content/uploads/2021/06/divi-food-store-10.png");
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
+  background-color: #00a850;
+}
+
+.daily {
+  padding-top: 100px;
+}
+
+.daily-item-box {
+  position: relative;
+}
+
+.daily-item-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #00a850;
+  opacity: 0.1;
+
+  border-radius: 12px;
+}
+
+.daily-left h2 {
+  font-size: 40px;
+}
+
+.daily-left hr {
+  transition: all 1s ease;
+  width: 100px;
+  height: 3px;
+  background-color: #00a850;
+}
+
+.daily-left p {
+  color: #666;
+}
+
+.daily-left hr:hover {
+  width: 120px;
+}
+
+.daily-item-textcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.daily-left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.daily-item-text h2 {
+  font-size: 16px;
+  color: #333;
+}
+
+.daily-item-text {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.daily-icon {
+  color: white;
+  font-weight: 900;
+}
+
+.daily-item-text p {
+  color: #777;
+  font-size: 12px;
+}
+
+.daily-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  padding-top: 60px;
+  align-items: center;
+}
+
+.daily-right h2 {
+  font-size: 36px;
+}
+
+.daily-right h4 {
+  font-size: 28px;
+}
+
+@media (max-width: 1300px) {
+  .daily-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .daily-item-textcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+  }
+  .daily-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .daily-item-b {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.daily-icon {
+  cursor: pointer;
+}
+
+.navbar-icons a {
+  color: black !important;
+}
