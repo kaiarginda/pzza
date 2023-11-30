@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { FaLessThanEqual } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TailSpin } from "react-loader-spinner";
 const CreateUser = () => {

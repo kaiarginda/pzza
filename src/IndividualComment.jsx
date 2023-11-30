@@ -56,7 +56,7 @@ const IndividualComment = ({
 
   const submitReply = async (com) => {
     if (user && user.name) {
-      await fetch("http://localhost:5000/v1/reply", {
+      await fetch("https://pizzaback-cews.onrender.com/v1/reply", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -108,7 +108,7 @@ const IndividualComment = ({
       )}
       {allComments.map((com) => {
         if (com.parentId === comment._id) {
-          if (url !== productId) return;
+          if (url !== productId) return null;
           return (
             <IndividualComment
               key={com._id}

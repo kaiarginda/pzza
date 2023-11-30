@@ -1,6 +1,6 @@
 import React from "react";
 import "./hero.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 const Hero = () => {
   const n = useRef("");
   const r = useRef("");

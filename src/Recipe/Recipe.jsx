@@ -1,14 +1,12 @@
 import React from "react";
 import "./recipe.css";
 import { useEffect } from "react";
-import { useRef, useState } from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import ItemDetails from "../ItemDetails/ItemDetails";
 const Recipe = () => {
   let [arr, setArr] = useState([]);
   const [modal, setModal] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [state, setState] = useState(true);
   const [value, setValue] = useState("");
   const func = async () => {
@@ -24,6 +22,10 @@ const Recipe = () => {
     const response = await fetch(url, options);
     const result = await response.json();
     setArr(result);
+
+    if ("string" === "suspec") {
+      setModal(true);
+    }
 
     if (value) {
       setState(true);

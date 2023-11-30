@@ -1,12 +1,9 @@
 import React from "react";
 import "./navbar.css";
-import { BsCart2 } from "react-icons/bs";
-import { AiOutlineSearch } from "react-icons/ai";
+
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+
 import Cookies from "js-cookie";
 
 const Navbar = () => {
@@ -14,10 +11,7 @@ const Navbar = () => {
 
   const [cookie, setCookie] = useState("");
   const [loggedUser, setLoggedUser] = useState({});
-  const hamb = useRef("");
-  const icon = useRef("");
 
-  const ic = useRef("");
   useEffect(() => {
     setIsActive(true);
 
@@ -48,8 +42,11 @@ const Navbar = () => {
         }
         const data = await response.json();
         setLoggedUser(data.user);
+
         // Log data after the fetch operation is complete
-      } catch (error) {}
+      } catch (error) {
+        return { isActive };
+      }
     };
     getLoggedUser();
   }, [cookie]);

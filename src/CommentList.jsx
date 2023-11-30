@@ -1,7 +1,6 @@
 import React from "react";
 import IndividualComment from "./IndividualComment";
 import { useState, useEffect } from "react";
-import { useCookies } from "react-cookie";
 const CommentList = ({ productId }) => {
   // await connectMongoDB();
   const [allComments, setAllCommments] = useState([]);
@@ -19,12 +18,15 @@ const CommentList = ({ productId }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://pizzaback-cews.onrender.com/v1/commentList");
+        const response = await fetch(
+          "https://pizzaback-cews.onrender.com/v1/commentList"
+        );
 
         if (response.ok) {
           const data = await response.json();
           console.log(data, "data from useffect in commentList");
           setComments(data.comments);
+          setLoggedUser(data.loggedUser || {});
           setAllCommments(data.allComments);
         } else {
           console.log("Request failed with status:", response.status);
