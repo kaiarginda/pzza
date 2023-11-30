@@ -53,24 +53,24 @@ function App() {
         {/* <Route path={`/register`} element={[<Register />]}></Route> */}
         {/* <Route path={`/login`} element={[<LoginForm />]}></Route> */}
         {/* <Route path={`/create-pizza`} element={[<CreatePizzaForm />]}></Route> */}
-        <Route path="/r3/create" element={[<CreatePizzaForm />]} />
-        <Route path="/r3/create-user" element={[<CreateUser />]} />
-        <Route path="/r3/log-in" element={[<LoginPage />]} />
-        <Route path="/r3/create-post" element={[<CreatePost />]} />
-        <Route path="/r3/review" element={[<ReviewPage />]} />
+        <Route path="/create" element={[<CreatePizzaForm />]} />
+        <Route path="/create-user" element={[<CreateUser />]} />
+        <Route path="/log-in" element={[<LoginPage />]} />
+        <Route path="/create-post" element={[<CreatePost />]} />
+        <Route path="/review" element={[<ReviewPage />]} />
 
-        <Route path="/r3/pizza/:pizzaId" element={[<PizzaDetails />]} />
-        <Route path="/r3/user/:name" element={[<IndividualUser />]} />
-        <Route path="/r3/post/:id" element={[<PostPage />]} />
+        <Route path="/pizza/:pizzaId" element={[<PizzaDetails />]} />
+        <Route path="/user/:name" element={[<IndividualUser />]} />
+        <Route path="/post/:id" element={[<PostPage />]} />
 
-        <Route path="/r3/products" element={[<ProductsList />]} />
-        <Route path="/r3/testimonial" element={[<ReviewList />]} />
-        <Route path="/r3/post" element={[<PostList />]} />
-        <Route path="/r3/return-policy" element={[<Return />]} />
-        <Route path="/r3/terms-of-use" element={[<Terms />]} />
-        <Route path="/r3/contact" element={[<Contact />]} />
+        <Route path="/products" element={[<ProductsList />]} />
+        <Route path="/testimonial" element={[<ReviewList />]} />
+        <Route path="/post" element={[<PostList />]} />
+        <Route path="/return-policy" element={[<Return />]} />
+        <Route path="/terms-of-use" element={[<Terms />]} />
+        <Route path="/contact" element={[<Contact />]} />
 
-        <Route path="/r3/website-map" element={[<Map />]} />
+        <Route path="/website-map" element={[<Map />]} />
       </Routes>
     </div>
   );
